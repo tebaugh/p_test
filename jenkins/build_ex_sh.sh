@@ -5,6 +5,15 @@ if [ -d $PYENV_HOME ]; then
     rm -rf $PYENV_HOME
 fi
 
+# Setup a proper path, I call my virtualenv dir "venv" and
+# I've got the virtualenv command installed in /usr/local/bin
+PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH
+if [ ! -d "venv" ]; then
+        virtualenv venv
+fi
+. venv/bin/activate
+
+
 # Create virtualenv and install necessary packages
 virtualenv --no-site-packages $PYENV_HOME
 . $PYENV_HOME/bin/activate
