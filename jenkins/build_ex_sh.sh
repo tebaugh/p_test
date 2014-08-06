@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 PYENV_HOME=$WORKSPACE/.pyenv/
-
+JENKINS_FILES=$WORKSPACE/jenkins/
 
 # Delete previously built virtualenv
 if [ -d $PYENV_HOME ]; then
@@ -23,6 +23,6 @@ virtualenv --no-site-packages $PYENV_HOME
 #pip install --quiet nosexcover
 #pip install --quiet pylint
 pip install --quiet $WORKSPACE/  # where your setup.py lives
-pip install -r $PYENV_HOME/requirements.txt
+pip install -r $JENKINS_FILES/requirements.txt
 #nosetests --with-xcoverage --with-xunit --cover-package=myapp --cover-erase
 #pylint -f parseable myapp/ | tee pylint.out
