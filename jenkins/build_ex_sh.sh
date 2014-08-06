@@ -1,4 +1,7 @@
+#!/usr/bin/env sh
+
 PYENV_HOME=$WORKSPACE/.pyenv/
+
 
 # Delete previously built virtualenv
 if [ -d $PYENV_HOME ]; then
