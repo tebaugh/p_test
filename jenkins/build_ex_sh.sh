@@ -12,7 +12,7 @@ fi
 # I've got the virtualenv command installed in /usr/local/bin
 PATH=$WORKSPACE/venv/bin:/usr/local/bin:$PATH
 if [ ! -d "venv" ]; then
-        virtualenv venv
+        virtualenv-2.7 venv
 fi
 . venv/bin/activate
 
